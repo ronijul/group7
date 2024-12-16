@@ -1,0 +1,259 @@
+
+/* קופסה לקטגוריות חיות */
+.PetCategories {
+    width: 75px; /* רוחב הקופסה */
+    height: 75px; /* גובה הקופסה */
+    background-color: white; /* צבע רקע */
+    text-align: center; /* יישור טקסט למרכז */
+    color: #156082; /* צבע הטקסט */
+    padding: 5px; /* רווח פנימי */
+    font-size: 15px; /* גודל הפונט */
+    font-family: Segoe UI; /* סוג הפונט */
+    border: 2.5px solid #156082; /* מסגרת בעובי וצבע אחיד */
+    margin-bottom: 10px; /* רווח תחתון */
+    display: flex; /* הפעלת Flexbox */
+    flex-direction: column; /* יישור אנכי */
+    justify-content: end; /* יישור התוכן לתחתית הקופסה */
+    align-items: center; /* יישור אופקי למרכז */
+    cursor: pointer;
+}
+
+/* מיקום קופסת הקטגוריות */
+#PetCategories {
+    position: absolute; /* מיקום מוחלט על המסך */
+    bottom: 30px; /* מרחק מהחלק התחתון של המסך */
+    right: 5px; /* מרחק מהחלק הימני של המסך */
+    display: flex; /* שמירה על Flexbox */
+    flex-direction: column; /* יישור אנכי */
+    align-items: flex-end; /* יישור אלמנטים ימינה */
+}
+
+/* מיקום הכפתורים */
+#Signning {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    flex-direction: column; /* כפתורים אחד מתחת לשני */
+    gap: 15px; /* רווח נקי בין הכפתורים */
+}
+
+/* עיצוב הכפתורים */
+.Signning {
+    width: 120px;
+    height: 40px;
+    background-color: #156082; /* צבע רקע */
+    color: white; /* צבע טקסט */
+    text-align: center;
+    line-height: 40px; /* יישור הטקסט אנכית */
+    border: none; /* הסרת מסגרת */
+    border-radius: 5px;
+    box-shadow: none; /* הסרת הצללה מוגזמת */
+    font-size: 18px;
+    font-family: "Segoe UI", sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.Signning:hover {
+    background-color: #104e6b; /* כהה יותר במעבר עכבר */
+}
+
+/* קופסת פרסום */
+.AD {
+    width: 120px; /* רוחב הקופסה */
+    height: 400px; /* גובה הקופסה */
+    background-color: #156082; /* צבע רקע */
+    text-align: center; /* יישור טקסט למרכז */
+    color: white; /* צבע הטקסט */
+    padding: 5px; /* רווח פנימי */
+    font-size: 25px; /* גודל הפונט */
+    font-family: Segoe UI; /* סוג הפונט */
+    display: flex; /* שימוש ב-Flexbox */
+    flex-direction: column; /* יישור אנכי */
+    justify-content: center; /* יישור למרכז אנכי */
+    align-items: center; /* יישור למרכז אופקי */
+}
+
+/* מיקום קופסת הפרסום */
+#AD {
+    position: absolute; /* מיקום מוחלט */
+    top: 200px; /* מרחק מהחלק העליון */
+    left: 20px; /* מרחק מהחלק השמאלי */
+}
+
+/* קופסת תשלום */
+.CashBox {
+    width: 120px; /* רוחב הקופסה */
+    height: 40px; /* גובה הקופסה */
+    background-color: #8FD14F; /* צבע רקע */
+    text-align: center; /* יישור טקסט למרכז */
+    color: white; /* צבע הטקסט */
+    padding: 5px; /* רווח פנימי */
+    border-radius: 5px; /* עיגול פינות */
+    font-size: 20px; /* גודל הפונט */
+    font-family: Segoe UI; /* סוג הפונט */
+    border: 1.5px solid #156082; /* מסגרת דקה */
+    margin-bottom: 10px; /* רווח תחתון */
+    cursor: pointer;
+}
+
+/* מיקום קופסת התשלום */
+#CashBox {
+    position: absolute; /* מיקום מוחלט */
+    top: 20px; /* מרחק מהחלק העליון */
+    left: 200px; /* מרחק מהחלק השמאלי */
+    display: flex; /* שמירה על Flexbox */
+    flex-direction: column; /* יישור אנכי */
+    align-items: flex-start; /* יישור שמאלה */
+}
+
+/* הצללה במעבר עכבר */
+.CashBox:hover {
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.5); /* הצללה מודגשת */
+}
+
+/* קופסת חיפוש */
+.SearchBox {
+    width: 400px; /* רוחב הקופסה */
+    height: 30px; /* גובה הקופסה */
+    background-color:white; /* צבע רקע */
+    text-align: center; /* יישור טקסט */
+    padding: 5px; /* רווח פנימי */
+    border-radius: 5px; /* עיגול פינות */
+    font-size: 20px; /* גודל טקסט כללי */
+    font-family: "Segoe UI"; /* סוג הפונט */
+    border: 1.5px solid #156082; /* מסגרת דקה */
+    margin: 20px auto 0; /* הוספת מרווח למעלה בלבד */
+    display: flex; /* שימוש ב-Flexbox */
+    flex-direction: row; /* יישור אופקי */
+    align-items: center; /* יישור למרכז אנכי */
+    justify-content: space-between; /* רווח בין האלמנטים בתוך הקופסה */
+}
+
+/* שדה הקלט של החיפוש */
+.SearchBox input {
+    width: 350px; /* רוחב השדה */
+    height: 100%; /* גובה מלא */
+    border: none; /* הסרת המסגרת */
+    outline: none; /* הסרת הקו במיקוד */
+    font-family: "Segoe UI"; /* סוג הפונט */
+    font-size: 16px; /* גודל הטקסט */
+    color: #333; /* צבע הטקסט */
+    padding: 5px; /* רווח פנימי */
+
+}
+
+/* עיצוב placeholder */
+.SearchBox input::placeholder {
+    color: #888; /* צבע הטקסט של ה-placeholder */
+    font-style: italic; /* טקסט נטוי */
+}
+
+/* כפתור החיפוש */
+.SearchBox button {
+    background-color: #156082; /* צבע רקע */
+    color: white; /* צבע הטקסט */
+    border: none; /* הסרת מסגרת */
+    border-radius: 5px; /* עיגול פינות */
+    padding: 5px 10px; /* רווח פנימי */
+    font-family: "Segoe UI"; /* סוג הפונט */
+    font-size: 16px; /* גודל הטקסט */
+    cursor: pointer; /* שינוי סמן העכבר */
+}
+
+/* שינוי צבע רקע במעבר עכבר על הכפתור */
+.SearchBox button:hover {
+    background-color: #104e6b; /* צבע רקע כהה יותר */
+}
+
+
+/* כפתור יצירת קשר עם הצללה */
+.ContactUs {
+    width: 130px; /* רוחב הכפתור */
+    height: 40px; /* גובה הכפתור */
+    background-color: white; /* צבע רקע */
+    text-align: center; /* יישור טקסט למרכז */
+    color: #156082; /* צבע הטקסט */
+    padding: 5px; /* רווח פנימי */
+    font-size: 20px; /* גודל הפונט */
+    font-family: Segoe UI; /* סוג הפונט */
+    border: none; /* הסרת המסגרת */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* הצללה עדינה */
+    cursor: pointer; /* שינוי סמן העכבר */
+    transition: box-shadow 0.3s ease; /* אפקט מעבר חלק */
+}
+
+/* הצללה במעבר עכבר */
+.ContactUs:hover {
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.5); /* הצללה מודגשת */
+}
+
+/* מיקום כפתור יצירת קשר */
+#ContactUs {
+    position: absolute; /* מיקום מוחלט */
+    bottom: 20px; /* מרחק מהחלק התחתון */
+    left: 20px; /* מרחק מהחלק השמאלי */
+    display: flex; /* שימוש ב-Flexbox */
+    flex-direction: column; /* כיוון אנכי */
+    align-items: flex-start; /* יישור הכפתור לשמאל */
+}
+
+/* כפתור עגלת הקניות הצללה */
+.Cart {
+    width: 130px; /* רוחב הכפתור */
+    height: 80px; /* גובה הכפתור */
+    background-color: white; /* צבע רקע */
+    text-align: center; /* יישור טקסט למרכז */
+    color: #156082; /* צבע הטקסט */
+    padding: 5px; /* רווח פנימי */
+    font-size: 15px; /* גודל הפונט */
+    font-family: Segoe UI; /* סוג הפונט */
+    border: none; /* הסרת המסגרת */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* הצללה עדינה */
+    cursor: pointer; /* שינוי סמן העכבר */
+    transition: box-shadow 0.3s ease; /* אפקט מעבר חלק */
+    display: flex; /* הפעלת Flexbox */
+    flex-direction: column; /* יישור אנכי */
+    justify-content: end; /* יישור התוכן לתחתית הקופסה */
+    align-items: center;
+
+}
+
+/* הצללה במעבר עכבר */
+.Cart:hover {
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.5); /* הצללה מודגשת */
+}
+
+/* מיקום עגלת הקניות קשר */
+#Cart {
+    position: absolute; /* מיקום מוחלט */
+    top: 20px; /* מרחק מהחלק התחתון */
+    right: 320px; /* מרחק מהחלק הימני */
+    display: flex; /* שימוש ב-Flexbox */
+    flex-direction: column; /* כיוון אנכי */
+    align-items: flex-start; /* יישור הכפתור לשמאל */
+}
+
+/*כותרת הקטגורייה */
+.CategoryName {
+    width: 400px; /* רוחב הקופסה */
+    height: 30px; /* גובה הקופסה */
+    text-align: center; /* יישור טקסט למרכז */
+    color:#156082 ; /* צבע הטקסט */
+    font-weight: bold;
+    padding: 5px; /* רווח פנימי */
+    font-size: 35px; /* גודל הפונט */
+    font-family: Segoe UI; /* סוג הפונט */
+    display: flex; /* שימוש ב-Flexbox */
+    flex-direction: column; /* יישור אנכי */
+    justify-content: center; /* יישור למרכז אנכי */
+    align-items: center; /* יישור למרכז אופקי */
+}
+
+/* מיקום כותרת הקטגורייה */
+#CategoryName {
+    position: absolute; /* מיקום מוחלט */
+    top:130px; /* מרחק מהחלק העליון */
+    right: 100px; /* מרחק מהחלק השמאלי */
+}
