@@ -1,16 +1,30 @@
+.LogoRashi {
+    position: absolute; /* מיקום מוחלט */
+    right: 10px; /* מרחק של 10 פיקסלים מהצד הימני */
+    top: 10px;
+}
+
+.Logo {
+    display: flex;
+    position: absolute; /* מיקום מוחלט */
+    top: 10px; /* מרחק מהחלק העליון */
+    left: 10px; /* מרחק מהחלק השמאלי */
+    width: 75px; /* רוחב הלוגו */
+    height: 75px; /* גובה הלוגו */
+}
 
 /* קופסה לקטגוריות חיות */
 .PetCategories {
-    width: 75px; /* רוחב הקופסה */
-    height: 75px; /* גובה הקופסה */
+    width: 85px; /* רוחב הקופסה */
+    height: 85px; /* גובה הקופסה */
     background-color: white; /* צבע רקע */
     text-align: center; /* יישור טקסט למרכז */
     color: #156082; /* צבע הטקסט */
-    padding: 5px; /* רווח פנימי */
+    padding: 10px; /* רווח פנימי */
     font-size: 15px; /* גודל הפונט */
     font-family: Segoe UI; /* סוג הפונט */
     border: 2.5px solid #156082; /* מסגרת בעובי וצבע אחיד */
-    margin-bottom: 10px; /* רווח תחתון */
+    margin-bottom: 5px; /* רווח תחתון */
     display: flex; /* הפעלת Flexbox */
     flex-direction: column; /* יישור אנכי */
     justify-content: end; /* יישור התוכן לתחתית הקופסה */
@@ -18,45 +32,24 @@
     cursor: pointer;
 }
 
-/* מיקום קופסת הקטגוריות */
-#PetCategories {
+/*מיקום קופסת הקטגוריות*/
+.Navigation {
     position: absolute; /* מיקום מוחלט על המסך */
-    bottom: 30px; /* מרחק מהחלק התחתון של המסך */
+    bottom: 130px; /* מרחק מהחלק התחתון של המסך */
     right: 5px; /* מרחק מהחלק הימני של המסך */
     display: flex; /* שמירה על Flexbox */
     flex-direction: column; /* יישור אנכי */
     align-items: flex-end; /* יישור אלמנטים ימינה */
 }
 
-/* מיקום הכפתורים */
-#Signning {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    display: flex;
-    flex-direction: column; /* כפתורים אחד מתחת לשני */
-    gap: 15px; /* רווח נקי בין הכפתורים */
-}
-
-/* עיצוב הכפתורים */
-.Signning {
-    width: 120px;
-    height: 40px;
-    background-color: #156082; /* צבע רקע */
-    color: white; /* צבע טקסט */
-    text-align: center;
-    line-height: 40px; /* יישור הטקסט אנכית */
-    border: none; /* הסרת מסגרת */
-    border-radius: 5px;
-    box-shadow: none; /* הסרת הצללה מוגזמת */
-    font-size: 18px;
-    font-family: "Segoe UI", sans-serif;
+.PetCategories:hover {
+    background-color: #156082;
+    color: white;
     cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
-.Signning:hover {
-    background-color: #104e6b; /* כהה יותר במעבר עכבר */
+.PetCategories:hover img {
+    filter: brightness(0) invert(1); /* הופך את התמונה ללבן */
 }
 
 /* קופסת פרסום */
@@ -73,51 +66,16 @@
     flex-direction: column; /* יישור אנכי */
     justify-content: center; /* יישור למרכז אנכי */
     align-items: center; /* יישור למרכז אופקי */
-}
-
-/* מיקום קופסת הפרסום */
-#AD {
     position: absolute; /* מיקום מוחלט */
     top: 200px; /* מרחק מהחלק העליון */
     left: 20px; /* מרחק מהחלק השמאלי */
-}
-
-/* קופסת תשלום */
-.CashBox {
-    width: 120px; /* רוחב הקופסה */
-    height: 40px; /* גובה הקופסה */
-    background-color: #8FD14F; /* צבע רקע */
-    text-align: center; /* יישור טקסט למרכז */
-    color: white; /* צבע הטקסט */
-    padding: 5px; /* רווח פנימי */
-    border-radius: 5px; /* עיגול פינות */
-    font-size: 20px; /* גודל הפונט */
-    font-family: Segoe UI; /* סוג הפונט */
-    border: 1.5px solid #156082; /* מסגרת דקה */
-    margin-bottom: 10px; /* רווח תחתון */
-    cursor: pointer;
-}
-
-/* מיקום קופסת התשלום */
-#CashBox {
-    position: absolute; /* מיקום מוחלט */
-    top: 20px; /* מרחק מהחלק העליון */
-    left: 200px; /* מרחק מהחלק השמאלי */
-    display: flex; /* שמירה על Flexbox */
-    flex-direction: column; /* יישור אנכי */
-    align-items: flex-start; /* יישור שמאלה */
-}
-
-/* הצללה במעבר עכבר */
-.CashBox:hover {
-    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.5); /* הצללה מודגשת */
 }
 
 /* קופסת חיפוש */
 .SearchBox {
     width: 400px; /* רוחב הקופסה */
     height: 30px; /* גובה הקופסה */
-    background-color:white; /* צבע רקע */
+    background-color: white; /* צבע רקע */
     text-align: center; /* יישור טקסט */
     padding: 5px; /* רווח פנימי */
     border-radius: 5px; /* עיגול פינות */
@@ -137,66 +95,528 @@
     height: 100%; /* גובה מלא */
     border: none; /* הסרת המסגרת */
     outline: none; /* הסרת הקו במיקוד */
-    font-family: "Segoe UI"; /* סוג הפונט */
     font-size: 16px; /* גודל הטקסט */
     color: #333; /* צבע הטקסט */
     padding: 5px; /* רווח פנימי */
-
+    font-family: "Segoe UI", sans-serif; /* פונט */
+    direction: rtl; /* כיוון הטקסט */
+    text-align: right; /* יישור הטקסט */
 }
 
 /* עיצוב placeholder */
 .SearchBox input::placeholder {
     color: #888; /* צבע הטקסט של ה-placeholder */
-    font-style: italic; /* טקסט נטוי */
+    font-family: "Segoe UI", sans-serif; /* פונט */
 }
 
 /* כפתור החיפוש */
 .SearchBox button {
-    background-color: #156082; /* צבע רקע */
-    color: white; /* צבע הטקסט */
     border: none; /* הסרת מסגרת */
-    border-radius: 5px; /* עיגול פינות */
     padding: 5px 10px; /* רווח פנימי */
-    font-family: "Segoe UI"; /* סוג הפונט */
-    font-size: 16px; /* גודל הטקסט */
     cursor: pointer; /* שינוי סמן העכבר */
+    background-color: white;
 }
 
 /* שינוי צבע רקע במעבר עכבר על הכפתור */
 .SearchBox button:hover {
-    background-color: #104e6b; /* צבע רקע כהה יותר */
+    background-color: #156082 /* צבע רקע כהה יותר */
+
 }
 
+#Title-rashi {
+    display: grid; /* קטגוריית ראשי מוצגת כברירת מחדל */
+}
 
-/* כפתור יצירת קשר עם הצללה */
-.ContactUs {
-    width: 130px; /* רוחב הכפתור */
-    height: 40px; /* גובה הכפתור */
-    background-color: white; /* צבע רקע */
-    text-align: center; /* יישור טקסט למרכז */
+/*כותרת הקטגורייה */
+.CategoryTitle {
+    display: none; /* הסתרת כל הקטגוריות כברירת מחדל */
+    width: 500px; /* רוחב הקופסה */
+    height: 30px; /* גובה הקופסה */
+    text-align: right; /* יישור טקסט למרכז */
     color: #156082; /* צבע הטקסט */
+    font-weight: bold;
     padding: 5px; /* רווח פנימי */
-    font-size: 20px; /* גודל הפונט */
+    font-size: 35px; /* גודל הפונט */
     font-family: Segoe UI; /* סוג הפונט */
-    border: none; /* הסרת המסגרת */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* הצללה עדינה */
-    cursor: pointer; /* שינוי סמן העכבר */
-    transition: box-shadow 0.3s ease; /* אפקט מעבר חלק */
+    flex-direction: column; /* יישור אנכי */
+    justify-content: center; /* יישור למרכז אנכי */
+    align-items: center; /* יישור למרכז אופקי */
+    direction: rtl; /* מוודא שסימן הקריאה יהיה במקום הנכון */
+    position: absolute; /* מיקום מוחלט */
+    top: 180px; /* מרחק מהחלק העליון */
+    right: 300px; /* מרחק מהחלק השמאלי */
 }
 
-/* הצללה במעבר עכבר */
-.ContactUs:hover {
+/* שדות הקלט הכלליים */
+.ConnectPop-content input,
+.signUpPop-content input,
+.CashPopup-content input {
+    width: 95%; /* רוחב מלא */
+    padding: 10px; /* רווח פנימי */
+    margin-bottom: 20px; /* רווח תחתון */
+    border: 1px solid #ccc; /* מסגרת */
+    font-size: 16px; /* גודל טקסט */
+    font-family: "Segoe UI", sans-serif; /* פונט */
+    direction: rtl; /* כיוון טקסט */
+    text-align: right; /* יישור הטקסט */
+}
+
+/* כפתור "לקופה" */
+.CashBox {
+    width: 120px; /* רוחב הכפתור */
+    height: 30px; /* גובה הכפתור */
+    background-color: #8FD14F; /* צבע רקע */
+    text-align: center; /* יישור טקסט */
+    color: white; /* צבע טקסט */
+    padding: 5px; /* רווח פנימי */
+    border-radius: 5px; /* פינות מעוגלות */
+    font-size: 20px; /* גודל טקסט */
+    font-family: "Segoe UI", sans-serif; /* סוג פונט */
+    border: 1.5px solid #156082; /* מסגרת */
+    cursor: pointer; /* שינוי סמן */
+    text-decoration: none; /* הסרת קו תחתון */
+    position: absolute; /* מיקום מוחלט */
+    top: 15px; /* מרחק מהחלק העליון */
+    left: 200px; /* מרחק מהחלק השמאלי */
+    display: flex; /* שמירה על Flexbox */
+    flex-direction: column; /* יישור אנכי */
+}
+
+.CashBox:hover {
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.5); /* הצללה */
+    background-color: #76c041; /* רקע כהה במעבר עכבר */
+}
+
+/* מציג את החלונית כאשר ה-URL מצביע על ה-id */
+#CashBoxPopup:target {
+    display: flex; /* מציג את החלונית כתצוגת Flexbox */
+}
+
+/* עיצוב כללי של חלונית */
+.CashPopup {
+    display: none; /* מוסתר כברירת מחדל */
+    position: fixed; /* מיקום מוחלט */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* רקע שקוף למחצה */
+    justify-content: center; /* מיקום אופקי */
+    align-items: center; /* מיקום אנכי */
+    z-index: 999; /* קדימות גבוהה */
+    font-family: "Segoe UI", sans-serif; /* פונט אחיד */
+}
+
+/* עיצוב התוכן בחלונית */
+.CashPopup-content {
+    background-color: white; /* רקע לבן */
+    padding: 30px; /* רווח פנימי */
+    width: 90%; /* שימוש באחוזים כדי להתאים לחלון */
+    max-width: 400px; /* רוחב מקסימלי */
+    text-align: center; /* יישור טקסט למרכז */
+    position: relative; /* מאפשר מיקום יחסי */
+    display: flex; /* שימוש ב-Flexbox */
+    flex-direction: column; /* אלמנטים במבנה אנכי */
+    gap: 15px; /* רווח בין האלמנטים */
+    max-height: 80vh; /* הגבלת גובה ל-80% מגובה המסך */
+    overflow-y: auto; /* גלילה אנכית אם התוכן חורג */
+    overflow-x: hidden; /* מניעת גלילה אופקית */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* הצללה */
+}
+
+/* עיצוב כפתור הסגירה */
+.close-CashPopup {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #156082; /* צבע טקסט */
+    text-decoration: none; /* הסרת קו תחתון */
+}
+
+/* עיצוב כותרת החלונית */
+.CashPopup-content h2 {
+    margin-bottom: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: "Segoe UI", sans-serif; /* סוג פונט */
+}
+
+/* עיצוב התוויות (labels) */
+.CashPopup-content label {
+    text-align: right; /* יישור לימין */
+    display: block; /* תווית בשורה נפרדת */
+    font-size: 16px; /* גודל טקסט */
+    direction: rtl; /* מוודא כתיבה מימין לשמאל */
+    margin-bottom: 5px; /* רווח קטן מתחת לתווית */
+}
+
+.CashSubmit:hover {
+    background-color: #104e6b; /* רקע כהה במעבר עכבר */
+}
+
+/* עיצוב כפתור השליחה */
+.CashSubmit {
+    background-color: #156082; /* רקע כחול */
+    color: white; /* טקסט לבן */
+    border: none; /* ללא מסגרת */
+    padding: 10px; /* רווח פנימי */
+    font-size: 18px; /* גודל טקסט */
+    width: 150px; /* רוחב קבוע */
+    border-radius: 5px; /* פינות מעוגלות */
+    cursor: pointer; /* שינוי סמן עכבר */
+    transition: background-color 0.3s ease; /* אפקט מעבר */
+    font-family: "Segoe UI", sans-serif; /* פונט אחיד */
+    align-self: flex-start; /* מיקום בצד שמאל */
+    margin-top: 10px; /* רווח מעל הכפתור */
+}
+
+/* מיקום הכפתורים */
+#LeftButtons {
+    position: absolute;
+    /*top: 2.7%;*/
+    /*left: 2%;*/
+    top: 15px;
+    left: 15px;
+    display: flex;
+    flex-direction: column; /* כפתורים אחד מתחת לשני */
+    gap: 15px; /* רווח נקי בין הכפתורים */
+}
+
+/*חלון קופץ להתחברות*/
+/* מציג את החלון כאשר ה-URL מצביע על ה-id שלו */
+#loginConnectPop:target {
+    display: flex; /* מציג את החלון כתצוגת Flexbox */
+}
+
+/* עיצוב כללי של החלון */
+.ConnectPop {
+    display: none; /* מוסתר כברירת מחדל */
+    position: fixed; /* מיקום מוחלט שמכסה את כל המסך */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* רקע חצי שקוף */
+    justify-content: center; /* יישור אופקי */
+    align-items: center; /* יישור אנכי */
+    z-index: 999; /* קדימות גבוהה */
+    font-family: "Segoe UI", sans-serif; /* פונט אחיד */
+}
+
+/* עיצוב תוכן החלון */
+.ConnectPop-content {
+    background-color: white; /* רקע לבן */
+    padding: 30px; /* רווח פנימי */
+    width: 400px; /* רוחב קבוע */
+    text-align: center; /* יישור למרכז */
+    position: relative; /* מאפשר מיקום כפתור הסגירה */
+}
+
+/* עיצוב כפתור הסגירה */
+.close-ConnectPop {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #156082; /* צבע כחול כהה */
+    text-decoration: none;
+}
+
+/* יישור הכותרת */
+.ConnectPop-content h2 {
+    margin-bottom: 20px;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+/* יישור תוויות (labels) לצד ימין */
+.ConnectPop-content label {
+    display: block; /* כל תווית בשורה נפרדת */
+    text-align: right; /* יישור הטקסט לצד ימין */
+    font-size: 16px; /* גודל טקסט */
+    margin-bottom: 5px; /* רווח תחתון לתווית */
+    direction: rtl; /* מוודא שהנקודותיים יהיו במקום הנכון */
+    font-family: "Segoe UI", sans-serif; /* פונט */
+}
+
+/* עיצוב כפתור ההתחברות */
+.ConnectPop-content button {
+    background-color: #156082;
+    color: white;
+    border: none;
+    padding: 10px;
+    display: flex; /* שימוש ב-Flexbox */
+    align-items: center; /* יישור אנכי */
+    justify-content: center; /* יישור אופקי */
+    font-size: 18px;
+    width: 150px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.ConnectPop-content button:hover {
+    background-color: #104e6b; /* כהה יותר במעבר עכבר */
+}
+
+/* עיצוב הקישורים "שכחתי סיסמה | להרשמה" */
+.ConnectPop-content p a {
+    text-decoration: none;
+    color: #156082;
+    font-size: 14px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.ConnectPop-content p a:hover {
+    text-decoration: underline;
+}
+
+/* עיצוב הכפתורים להתחברות והרשמה במסך הראשי  */
+.Signning {
+    width: 120px;
+    height: 40px;
+    background-color: #156082; /* צבע רקע */
+    color: white; /* צבע טקסט */
+    text-align: center;
+    text-decoration: none; /* הסרת קו תחתון */
+    line-height: 40px; /* יישור הטקסט אנכית */
+    border: none; /* הסרת מסגרת */
+    border-radius: 5px;
+    box-shadow: none; /* הסרת הצללה מוגזמת */
+    font-size: 18px;
+    font-family: "Segoe UI", sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.Signning:hover {
+    background-color: #104e6b; /* כהה יותר במעבר עכבר */
+}
+
+/*חלון קופץ להרשמה*/
+/* מציג את החלון כאשר ה-URL מצביע על ה-id שלו */
+#signUp:target {
+    display: flex; /* מציג את החלון כתצוגת Flexbox */
+}
+
+/* עיצוב כללי של החלון */
+.signUpPop {
+    display: none; /* מוסתר כברירת מחדל */
+    position: fixed; /* מיקום מוחלט שמכסה את כל המסך */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* רקע חצי שקוף */
+    justify-content: center; /* יישור אופקי */
+    align-items: center; /* יישור אנכי */
+    z-index: 999; /* קדימות גבוהה */
+    font-family: "Segoe UI", sans-serif; /* פונט אחיד */
+}
+
+/* עיצוב תוכן החלון */
+.signUpPop-content {
+    background-color: white; /* רקע לבן */
+    padding: 30px; /* רווח פנימי */
+    width: 90%; /* שימוש באחוזים במקום גודל קבוע */
+    max-width: 400px; /* רוחב מקסימלי */
+    height: 90%;
+    text-align: center; /* יישור למרכז */
+    position: relative; /* מאפשר מיקום כפתור הסגירה */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* הצללה */
+    margin: 40px auto; /* מוסיף רווח מסביב לחלון */
+    overflow: auto; /* גלילה במידה והתוכן ארוך מדי */
+}
+
+/* עיצוב כפתור הסגירה */
+.close-signUpPop {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #156082; /* צבע כחול כהה */
+    text-decoration: none;
+}
+
+/* יישור הכותרת */
+.signUpPop-content h2 {
+    margin-bottom: 20px;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+/* יישור תוויות (labels) לצד ימין */
+.signUpPop-content label {
+    display: block; /* כל תווית בשורה נפרדת */
+    text-align: right; /* יישור הטקסט לצד ימין */
+    font-size: 16px; /* גודל טקסט */
+    margin-bottom: 3px; /* רווח תחתון לתווית */
+    direction: rtl; /* מוודא שהנקודותיים יהיו במקום הנכון */
+    font-family: "Segoe UI", sans-serif; /* פונט */
+}
+
+/* עיצוב כפתור ההתחברות */
+.signUpPop-content button {
+    background-color: #156082;
+    color: white;
+    border: none;
+    padding: 10px;
+    display: flex; /* שימוש ב-Flexbox */
+    align-items: center; /* יישור אנכי */
+    justify-content: center; /* יישור אופקי */
+    font-size: 18px;
+    width: 150px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.signUpPop-content button:hover {
+    background-color: #104e6b; /* כהה יותר במעבר עכבר */
+}
+
+/* עיצוב הקישור הרשמה" */
+.signUpPop-content p a {
+    text-decoration: none;
+    color: #156082;
+    font-size: 14px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.signUpPop-content p a:hover {
+    text-decoration: underline;
+}
+
+/* עיצוב כפתור "צור קשר" */
+.ContactUs-trigger {
+    width: 140px; /* רוחב הכפתור */
+    height: 70px; /* גובה הכפתור */
+    background-color: white; /* צבע רקע */
+    display: flex; /* שימוש ב-Flexbox */
+    flex-direction: row; /* יישור אופקי */
+    align-items: center; /* יישור אנכי של הטקסט והאייקון */
+    justify-content: center; /* יישור אופקי של התוכן */
+    gap: 10px; /* רווח בין הטקסט לאייקון */
+    color: #156082; /* צבע הטקסט */
+    font-size: 20px; /* גודל הטקסט */
+    font-family: "Segoe UI", sans-serif; /* סוג הפונט */
+    border: none; /* ללא מסגרת */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* הצללה */
+    cursor: pointer; /* שינוי סמן עכבר */
+    transition: box-shadow 0.3s ease; /* אפקט מעבר */
+    padding: 10px; /* רווח פנימי */
+    position: absolute; /* מיקום מוחלט על המסך */
+    bottom: 20px; /* מרחק מהחלק התחתון */
+    left: 90px; /* מיקום לפי ציר האופקי */
+    transform: translateX(-50%); /* מיקום מדויק */
+    text-decoration: none;
+}
+
+/* אפקט מעבר בעכבר על הכפתור */
+.ContactUs-trigger:hover {
     box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.5); /* הצללה מודגשת */
 }
 
-/* מיקום כפתור יצירת קשר */
-#ContactUs {
-    position: absolute; /* מיקום מוחלט */
-    bottom: 20px; /* מרחק מהחלק התחתון */
-    left: 20px; /* מרחק מהחלק השמאלי */
+/* הצגת החלון כאשר מופעל */
+#ContactPopup:target {
+    display: flex; /* מציג את החלון בתצוגת Flexbox */
+}
+
+/* עיצוב כללי של חלון "צור קשר" */
+.ContactUs-popup {
+    display: none; /* מוסתר כברירת מחדל */
+    position: fixed; /* מיקום מוחלט שמכסה את כל המסך */
+    top: 0; /* מהחלק העליון */
+    left: 0; /* מהחלק השמאלי */
+    width: 100%; /* רוחב מלא */
+    height: 100%; /* גובה מלא */
+    background-color: rgba(0, 0, 0, 0.5); /* רקע חצי שקוף */
+    justify-content: center; /* ממרכז אופקית */
+    align-items: center; /* ממרכז אנכית */
+    z-index: 999; /* קדימות גבוהה */
+}
+
+/* עיצוב תוכן החלונית */
+.ContactUs-content {
+    background-color: white; /* רקע לבן */
+    padding: 30px; /* רווח פנימי */
+    width: 400px; /* רוחב קבוע */
+    text-align: right; /* יישור תוכן טקסט לימין */
+    position: relative; /* כפתור סגירה ממוקם */
     display: flex; /* שימוש ב-Flexbox */
-    flex-direction: column; /* כיוון אנכי */
-    align-items: flex-start; /* יישור הכפתור לשמאל */
+    flex-direction: column; /* תוכן אנכי */
+    gap: 10px; /* רווח בין אלמנטים */
+}
+
+/* עיצוב כפתור סגירה */
+.close-ContactUs {
+    position: absolute; /* מיקום מוחלט בתוך התוכן */
+    top: 10px; /* מרחק מהחלק העליון */
+    right: 15px; /* מרחק מהחלק הימני */
+    font-size: 20px; /* גודל טקסט */
+    cursor: pointer; /* שינוי סמן עכבר */
+    color: #156082; /* צבע כחול */
+    text-decoration: none; /* ללא קו תחתון */
+}
+
+/* עיצוב הכותרת */
+.ContactUs-content h2 {
+    margin-bottom: 20px; /* רווח תחתון */
+    font-size: 28px; /* גודל טקסט */
+    font-weight: bold; /* טקסט מודגש */
+    font-family: "Segoe UI", sans-serif; /* פונט אחיד */
+    text-align: center; /* יישור הטקסט */
+}
+
+/* עיצוב התוויות */
+.ContactUs-content label {
+    display: block; /* כל תווית בשורה נפרדת */
+    text-align: right; /* יישור לימין */
+    font-size: 16px; /* גודל טקסט */
+    margin-bottom: 5px; /* רווח מתחת לתווית */
+    font-family: "Segoe UI", sans-serif; /* פונט אחיד */
+    direction: rtl; /* כיוון הטקסט */
+    text-align: right; /* יישור הטקסט */
+}
+
+/* עיצוב שדות הטקסט */
+.ContactUs-content input,
+.ContactUs-content textarea {
+    width: 95%; /* רוחב מלא */
+    padding: 10px; /* רווח פנימי */
+    margin-bottom: 20px; /* רווח תחתון */
+    border: 1px solid #ccc; /* מסגרת */
+    font-size: 16px; /* גודל טקסט */
+    font-family: "Segoe UI", sans-serif; /* פונט אחיד */
+    direction: rtl; /* כיוון טקסט */
+    text-align: right; /* יישור טקסט לימין */
+}
+
+/* עיצוב כפתור השליחה */
+.ContactUs-submit {
+    background-color: #156082; /* רקע כחול */
+    color: white; /* טקסט לבן */
+    border: none; /* ללא מסגרת */
+    padding: 10px; /* רווח פנימי */
+    font-size: 18px; /* גודל טקסט */
+    width: 150px; /* רוחב קבוע */
+    border-radius: 5px; /* פינות מעוגלות */
+    cursor: pointer; /* שינוי סמן עכבר */
+    transition: background-color 0.3s ease; /* אפקט מעבר */
+    font-family: "Segoe UI", sans-serif; /* פונט אחיד */
+    align-self: flex-start; /* מיקום בצד שמאל */
+    margin-top: 10px; /* רווח מעל הכפתור */
+}
+
+/* שינוי רקע בעכבר */
+.ContactUs-submit:hover {
+    background-color: #104e6b; /* רקע כהה */
 }
 
 /* כפתור עגלת הקניות הצללה */
@@ -213,11 +633,13 @@
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* הצללה עדינה */
     cursor: pointer; /* שינוי סמן העכבר */
     transition: box-shadow 0.3s ease; /* אפקט מעבר חלק */
-    display: flex; /* הפעלת Flexbox */
     flex-direction: column; /* יישור אנכי */
     justify-content: end; /* יישור התוכן לתחתית הקופסה */
     align-items: center;
-
+    position: absolute; /* מיקום מוחלט */
+    top: 20px; /* מרחק מהחלק התחתון */
+    right: 320px; /* מרחק מהחלק הימני */
+    display: flex; /* שימוש ב-Flexbox */
 }
 
 /* הצללה במעבר עכבר */
@@ -225,35 +647,292 @@
     box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.5); /* הצללה מודגשת */
 }
 
-/* מיקום עגלת הקניות קשר */
-#Cart {
-    position: absolute; /* מיקום מוחלט */
-    top: 20px; /* מרחק מהחלק התחתון */
-    right: 320px; /* מרחק מהחלק הימני */
+/* כפתור "הוסף לסל" */
+.add-to-cart {
+    background-color: #156082; /* צבע רקע */
+    color: white; /* צבע טקסט */
+    border: none; /* מסגרת */
+    padding: 10px 15px; /* רווח פנימי */
+    cursor: pointer; /* שינוי סמן */
+    font-size: 14px; /* גודל טקסט */
+    font-family: "Segoe UI", sans-serif; /* פונט */
+    transition: background-color 0.3s ease; /* אפקט מעבר */
+    width: 120px; /* רוחב קבוע */
     display: flex; /* שימוש ב-Flexbox */
-    flex-direction: column; /* כיוון אנכי */
-    align-items: flex-start; /* יישור הכפתור לשמאל */
+    align-items: center; /* יישור אנכי */
+    justify-content: center; /* יישור אופקי */
+    gap: 10px; /* רווח בין הטקסט לאייקון */
+    margin-top: auto; /* דוחף את הכפתור לתחתית */
 }
 
-/*כותרת הקטגורייה */
-.CategoryName {
-    width: 400px; /* רוחב הקופסה */
-    height: 30px; /* גובה הקופסה */
-    text-align: center; /* יישור טקסט למרכז */
-    color:#156082 ; /* צבע הטקסט */
-    font-weight: bold;
-    padding: 5px; /* רווח פנימי */
-    font-size: 35px; /* גודל הפונט */
-    font-family: Segoe UI; /* סוג הפונט */
-    display: flex; /* שימוש ב-Flexbox */
-    flex-direction: column; /* יישור אנכי */
-    justify-content: center; /* יישור למרכז אנכי */
-    align-items: center; /* יישור למרכז אופקי */
+.add-to-cart:hover {
+    background-color: #104e6b; /* צבע כהה במעבר */
 }
 
-/* מיקום כותרת הקטגורייה */
-#CategoryName {
+/* כפתור עגלת הקניות */
+.Cart {
+    width: 130px;
+    height: 80px;
+    background-color: white;
+    text-align: center;
+    color: #156082;
+    padding: 5px;
+    font-size: 15px;
+    font-family: "Segoe UI", sans-serif;
+    border: none;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    text-decoration: none;
+}
+
+.Cart:hover {
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* רקע חצי שקוף לחלונית עגלת הקניות */
+.CartPopupWrapper {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* רקע חצי שקוף */
+    z-index: 1000;
+    justify-content: flex-end; /* מיקום החלונית בצד ימין */
+    align-items: center;
+}
+
+/* תוכן חלונית עגלת הקניות */
+.CartPopup {
+    width: 30%;
+    height: 100%;
+    background-color: white;
+    overflow-y: auto;
+    font-family: "Segoe UI", sans-serif;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+}
+
+.CartPopup h2 {
+    margin-top: 30px;
+    text-align: right;
+    font-family: "Segoe UI", sans-serif;
+}
+
+/* מציג את החלונית */
+:target.CartPopupWrapper {
+    display: flex;
+}
+
+/* כפתור הסגירה */
+.close-CartPopup {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #156082;
+    text-decoration: none;
+}
+
+.cart-items {
+    list-style: none; /* ביטול הצגת נקודות או מספרים כברירת מחדל עבור רשימה לא מסודרת (<ul>) */
+    padding: 0; /* הסרת ריווח פנימי מסביב לרשימה */
+    margin: 50px 0 0 0; /* יצירת ריווח חיצוני: 50 פיקסלים מלמעלה, וללא ריווח מימין, מלמטה ומשמאל */
+
+}
+
+.cart-items li {
+    display: flex; /* שימוש ב-Flexbox כדי לסדר את הפריטים בתוך הרשימה בצורה אופקית */
+    align-items: center; /* יישור אנכי של הפריטים במרכז השורה */
+    margin-bottom: 15px; /* ריווח חיצוני מתחת לכל פריט ברשימה */
+    border-bottom: 1px solid #ccc; /* קו תחתון דק מתחת לכל פריט */
+    padding-bottom: 10px; /* ריווח פנימי בתחתית כל פריט */
+}
+
+.cart-item-image {
+    width: 50px; /* רוחב קבוע של תמונת המוצר */
+    height: 50px; /* גובה קבוע של תמונת המוצר */
+    margin-right: 10px; /* ריווח חיצוני מימין לתמונה */
+}
+
+.cart-item-details {
+    flex: 1; /* מאפשר לפרטים לתפוס את כל הרוחב הפנוי */
+    text-align: right; /* יישור הטקסט לימין */
+}
+
+.cart-item-actions {
+    text-align: right; /* יישור פעולות המוצר (כמו כמות) לימין */
+    font-size: 14px; /* גודל טקסט קטן לפעולות */
+}
+
+/* עיצוב סיכום עגלת הקניות */
+.cart-summary {
+    margin-top: 20px; /* ריווח חיצוני מלמעלה בין הרשימה לסיכום */
+    text-align: left; /* יישור טקסט של הסיכום לשמאל */
+}
+
+.cart-summary p {
+    font-size: 18px; /* גודל טקסט מודגש עבור סיכום המחיר */
+    font-weight: bold; /* הפיכת הטקסט למודגש */
+}
+
+.proceed-to-checkout {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #156082;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: "Segoe UI", sans-serif;
+}
+
+.proceed-to-checkout:hover {
+    background-color: #104e6b;
+}
+
+.CartPopup .Logo {
+    display: flex;
+    margin-left: 970px;
+}
+
+#scroll-rashi {
+    display: grid; /* קטגוריית ראשי מוצגת כברירת מחדל */
+}
+
+/* קונטיינר הקוביות */
+.scroll-container {
+    display: none; /* הסתרת כל הקטגוריות כברירת מחדל */
+    grid-template-columns: repeat(4, 1fr); /* 4 קוביות בכל שורה */
+    gap: 20px; /* רווח בין הקוביות */
+    padding: 10px; /* רווח פנימי */
+    border: 2px solid black; /* מסגרת */
+    background-color: white; /* צבע רקע */
     position: absolute; /* מיקום מוחלט */
-    top:130px; /* מרחק מהחלק העליון */
-    right: 100px; /* מרחק מהחלק השמאלי */
+    bottom: 150px; /* מרחק מהחלק התחתון */
+    left: 50%; /* מרכז את הקונטיינר אופקית */
+    transform: translateX(-50%); /* תיקון למרכז */
+    width: 90%; /* הקונטיינר תופס 90% מהרוחב */
+    max-width: 800px; /* רוחב מקסימלי */
+    max-height: 350px; /* גובה המאפשר רק שורה אחת גלויה */
+    overflow-y: auto; /* גלילה אנכית */
+}
+
+.ScrollContainer-item {
+    display: flex; /* הופך את הקובייה כולה למיכל Flexbox */
+    flex-direction: column; /* מסדר את התוכן אנכית */
+    align-items: center; /* ממרכז את כל התוכן בתוך הקובייה */
+    justify-content: space-between; /* מפזר את התוכן שווה */
+    text-align: center; /* יישור טקסט */
+    padding: 20px; /* רווח פנימי */
+    min-height: 250px; /* גובה מינימלי */
+    background-color: white; /* רקע לבן */
+    border: 1px solid #ddd; /* מסגרת דקה */
+    border-radius: 5px; /* פינות מעוגלות */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* הצללה */
+    font-family: "Segoe UI", sans-serif; /* פונט */
+}
+
+/* שם המוצר */
+.Item-name {
+    font-size: 14px; /* גודל טקסט */
+    color: black; /* צבע טקסט */
+    font-family: "Segoe UI", sans-serif; /* פונט */
+    margin: 0 0 10px 0; /* רווח קטן מתחת לטקסט */
+}
+
+/* מחיר המוצר */
+.Item-price {
+    margin: 10px 0; /* רווח מעל ומתחת למחיר */
+    font-size: 16px; /* גודל טקסט */
+    color: black; /* צבע המחיר */
+    font-family: "Segoe UI", sans-serif; /* פונט */
+    font-weight: bold; /* טקסט מודגש */
+}
+
+/* עיצוב למסכים קטנים מ-460px (טלפונים ניידים) */
+@media (max-width: 800px) {
+    /* קופסת הלוגו */
+    .LogoRashi,
+    .Logo {
+        width: 40px;
+        height: 40px;
+        right: 75px;
+    }
+
+    /* כפתורי הקטגוריות */
+    .PetCategories {
+        width: 70px;
+        height: 70px;
+        font-size: 10px;
+    }
+
+    /* ניווט */
+    #Navigation {
+        bottom: 50px;
+        right: 0;
+        top: 250px;
+        width: 75px;
+    }
+
+    /* קופסת פרסום */
+    .AD {
+        display: none;
+    }
+
+    /* תיבת חיפוש */
+    .SearchBox {
+        font-size: 12px;
+        width: 30%;
+    }
+
+    .SearchBox input {
+        width: 40%;
+        font-size: 12px;
+    }
+
+    /* רשימת פריטים */
+    .scroll-container {
+        /*grid-template-columns: 2fr; !* פריט אחד בכל שורה *!*/
+        gap: 10px;
+        width: 60%;
+        grid-template-columns: repeat(2, 1fr); /* שתי עמודות */
+    }
+
+    .ScrollContainer-item {
+        padding: 5px;
+        min-height: 300px;
+    }
+
+    .Cart {
+        width: 80px;
+        height: 50px;
+        font-size: 10px;
+        padding: 3px;
+        right: 160px;
+    }
+
+    /* כפתור "לקופה" */
+    .CashBox {
+        width: 80px; /* רוחב הכפתור */
+        height: 30px; /* גובה הכפתור */
+        font-size: 20px; /* גודל טקסט */
+        top: 15px; /* מרחק מהחלק העליון */
+        left: 150px; /* מרחק מהחלק השמאלי */
+    }
+
+    /*כותרת הקטגורייה */
+    .CategoryTitle {
+        width: 350px; /* רוחב הקופסה */
+        height: 30px; /* גובה הקופסה */
+        font-size: 25px; /* גודל הפונט */
+        top: 180px; /* מרחק מהחלק העליון */
+        right: 140px; /* מרחק מהחלק השמאלי */
+    }
 }

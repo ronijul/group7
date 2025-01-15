@@ -5,45 +5,1132 @@
     <title>PetPlaza</title>
     <link rel="stylesheet" href="PART_B.css">
 </head>
-    <body>
-        <div id="PetCategories">
-            <button id="rashi" class="PetCategories">ראשי</button>
-            <button id="dogs" class="PetCategories">כלבים</button>
-            <button id="cats" class="PetCategories">חתולים</button>
-            <button id="fish" class="PetCategories">דגי נוי</button>
-            <button id="rodents" class="PetCategories">מכרסמים</button>
-            <button id="birds" class="PetCategories">ציפורים</button>
-            <button id="reptiles" class="PetCategories">זוחלים</button>
+<body>
+
+<div id="LogoRashi" class="LogoRashi">
+    <img src=".idea/WebImages/logo.png" alt="" style="height:100px; width:100px">
+</div>
+
+<div class="Navigation">
+    <button id="rashi" class="PetCategories">
+        <img src=".idea/WebImages/icon- rashi.png" alt="" style="width: 35px">
+        ראשי
+    </button>
+
+    <button id="Food" class="PetCategories">
+        <img src=".idea/WebImages/קערת אוכל.png" alt="" style="width: 40px">
+        מזון
+    </button>
+
+    <button id="Toys" class="PetCategories">
+        <img src=".idea/WebImages/כדור לצעצועים.png" alt="" style="width: 26px">
+        צעצועים
+    </button>
+
+    <button id="Cages" class="PetCategories">
+        <img src=".idea/WebImages/כלוב.png" alt="" style="width: 35px">
+        כלובים
+    </button>
+
+
+    <button id="Mashlim" class="PetCategories">
+        <img src=".idea/WebImages/טביעת רגל.png" alt="" style="width: 30px">
+        מוצרים משלימים
+    </button>
+
+</div>
+
+
+<div class="AD">
+
+    <img src=".idea/WebImages/משאית לפרסומת.png" alt="" style="width: 100px">
+    משלוחים חינם לכל הארץ עד 5 ימי עסקים
+</div>
+
+<!--טופס חיפוש-->
+<form action="/search" method="get" class="SearchBox">
+    <button><img src=".idea/WebImages/זכוכית מגדלת לחיפוש.png" alt="" style="width: 20px; height: 20px;"></button>
+    <input type="text" placeholder="חיפוש">
+</form>
+
+<!--    הטקסט שמוצג מעל כל קונטיינר-->
+<div id="Title-rashi" class="CategoryTitle">
+    לכלב שלכם מגיע הטוב ביותר!
+</div>
+
+<div id="Title-Food" class="CategoryTitle">
+    מזון
+</div>
+
+<div id="Title-Toys" class="CategoryTitle">
+    צעצועים
+</div>
+
+<div id="Title-Cages" class="CategoryTitle">
+    כלובים
+</div>
+
+<div id="Title-Mashlim" class="CategoryTitle">
+    מוצרים משלימים
+</div>
+
+<!-- כפתור "לקופה" -->
+<a href="#CashBoxPopup" class="CashBox">לקופה</a>
+
+
+<!-- חלונית קופצת לשליחת הזמנה -->
+<div id="CashBoxPopup" class="CashPopup">
+    <div class="CashPopup-content">
+
+        <!-- לוגו -->
+        <div id="LogoCash" class="Logo">
+            <img src=".idea/WebImages/logo.png" alt="Logo" style="width: 75px; height: 75px;">
         </div>
 
-        <div id="Signning">
-            <button id="signIn" class="Signning"> להתחברות </button>
-            <button id="signUp" class="Signning"> להרשמה </button>
-        </div>
+        <a href="#" class="close-CashPopup">&times;</a>
+        <h2>שליחת הזמנה</h2>
 
-        <div id="AD">
-            <p class="AD">  משלוחים חינם לכל הארץ עד 5 ימי עסקים  </p>
-        </div>
+        <form id="CashBoxForm" action="/order" method="post">
+            <label for="OrderEmail">אימייל:</label>
+            <input type="text" id="OrderEmail" placeholder="הכנס אימייל" required>
 
-        <div id="CashBox">
-            <button id="cash" class="CashBox">לקופה</button>
-        </div>
+            <label for="OrderPhone">טלפון:</label>
+            <input type="text" id="OrderPhone" placeholder="הכנס מספר טלפון" required>
 
-        <div class="SearchBox">
-            <input type="text" placeholder="לחיפוש הקלד/י כאן">
-            <button>חפש</button>
-        </div>
+            <label for="OrderCity">עיר:</label>
+            <input type="text" id="OrderCity" placeholder="הכנס עיר" required>
 
-        <div id="ContactUs">
-            <button id="ContactButton" class="ContactUs"> צרו קשר </button>
-        </div>
+            <label for="OrderStreet">רחוב:</label>
+            <input type="text" id="OrderStreet" placeholder="הכנס רחוב" required>
 
-        <div id="Cart">
-            <button id="MyCart" class="Cart"> לעגלת הקניות </button>
-        </div>
+            <label for="OrderHouseNumber">מספר בית:</label>
+            <input type="text" id="OrderHouseNumber" placeholder="הכנס מספר בית" required>
 
-        <div id="CategoryName">
-            <p class="CategoryName">  מוצרים פופולאריים </p>
+            <label for="idNumber">תעודת זהות:</label>
+            <input type="text" id="idNumber" placeholder="הכנס תעודת זהות" required>
+
+            <button type="submit" class="CashSubmit">שליחה</button>
+        </form>
+    </div>
+</div>
+
+<div id="LeftButtons">
+    <a href="#loginConnectPop" class="Signning">להתחברות</a>
+    <a href="#signUp" class="Signning">להרשמה</a>
+</div>
+
+
+<!-- החלון הקופץ להתחברות -->
+<div id="loginConnectPop" class="ConnectPop">
+    <div class="ConnectPop-content">
+
+        <div id="LogoConnect" class="Logo">
+            <img src=".idea/WebImages/logo.png" alt="Logo" style="width: 75px; height: 75px;">
         </div>
-    </body>
+        <a href="#" class="close-ConnectPop">&times;</a>
+        <h2>התחברות</h2>
+
+        <!-- טופס ההתחברות -->
+        <form action="/login" method="POST">
+
+            <label for="LoginEmail">אימייל:</label>
+            <input type="email" id="LoginEmail" name="email" placeholder="הכנס אימייל" required>
+
+            <label for="password">סיסמה:</label>
+            <input type="password" id="password" name="password" placeholder="הכנס סיסמה" required>
+
+            <button type="submit" class="Signning">התחברות</button>
+            <a href="#">שכחתי סיסמה</a> | <a href="#" id="ToSignUp">להרשמה</a>
+        </form>
+    </div>
+</div>
+
+
+<!-- החלון הקופץ להרשמה -->
+<div id="signUp" class="signUpPop">
+    <div class="signUpPop-content">
+
+        <!-- לוגו -->
+        <div id="LogoSign" class="Logo">
+            <img src=".idea/WebImages/logo.png" alt="Logo" style="width: 75px; height: 75px;">
+        </div>
+        <a href="#" class="close-signUpPop">&times;</a>
+        <h2>הרשמה</h2>
+
+        <!-- טופס הרשמה -->
+        <form id="signUpForm" action="/submit-form" method="POST">
+
+            <label for="firstName">שם פרטי</label>
+            <input type="text" id="firstName" name="FirstName" placeholder="הכנס שם פרטי" required>
+
+            <label for="lastName">שם משפחה</label>
+            <input type="text" id="lastName" name="LastName" placeholder="הכנס שם משפחה" required>
+
+            <label for="SignUpPhone">טלפון</label>
+            <input type="tel" id="SignUpPhone" name="phone" placeholder="הכנס מספר טלפון" required>
+
+            <label for="SignUpEmail">אימייל:</label>
+            <input type="text" id="SignUpEmail" name="email" placeholder="הכנס אימייל" required>
+
+            <label for="SignUpPassword">סיסמה:</label>
+            <input type="password" id="SignUpPassword" name="password" placeholder="הכנס סיסמה" required>
+
+            <label for="confirmPassword">אימות סיסמה</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" placeholder="הכנס סיסמה שוב"
+                   required>
+
+            <label>כתובת למשלוח</label>
+            <div class="address-fields">
+                <input type="text" id="SignUpCity" name="city" placeholder="עיר" required>
+                <input type="text" id="street" name="street" placeholder="רחוב" required>
+                <input type="text" id="houseNumber" name="houseNum" placeholder="מס' בית" required>
+            </div>
+
+            <button type="submit" class="Signning">הרשמה</button>
+        </form>
+    </div>
+</div>
+
+
+<!-- כפתור צור קשר -->
+<a href="#ContactPopup" id="ContactButton" class="ContactUs-trigger">
+    יצירת קשר
+    <img src=".idea/WebImages/צרו קשר.png" alt="" style="width: 30px"> </a>
+
+<!-- החלון הקופץ ליצירת קשר -->
+<div id="ContactPopup" class="ContactUs-popup">
+    <div class="ContactUs-content">
+        <a href="#" class="close-ContactUs">&times;</a>
+        <div id="LogoContact" class="Logo">
+            <img src=".idea/WebImages/logo.png" alt="Logo">
+        </div>
+        <h2>יצירת קשר</h2>
+
+        <!-- טופס יצירת קשר -->
+        <form id="contactUsForm" action="/submit_contact" method="post">
+
+            <label for="ContactEmail">אימייל:</label>
+            <input type="text" id="ContactEmail" name="email" placeholder="הכניסו אימייל">
+            <label for="ContactMessage">טקסט:</label>
+            <textarea id="ContactMessage" name="message" placeholder="במה נוכל לעזור?" rows="4"></textarea>
+            <button type="submit" class="ContactUs-submit">שליחה</button>
+        </form>
+    </div>
+</div>
+
+
+<!-- כפתור עגלת הקניות -->
+<!-- קישור שמוביל לחלונית עגלת הקניות -->
+<a href="#CartPopupWrapper" class="Cart">
+    <!-- אייקון עגלת הקניות -->
+    <img src=".idea/WebImages/עגלה.png" alt="עגלת הקניות" style="width: 50px; height: 50px;">
+    <!-- טקסט שמסביר על הכפתור -->
+    לעגלת הקניות
+</a>
+
+
+<!-- עיטוף חלונית עגלת הקניות עם רקע חצי שקוף -->
+<div id="CartPopupWrapper" class="CartPopupWrapper">
+    <!-- חלונית עגלת הקניות -->
+    <div id="CartPopup" class="CartPopup">
+        <!-- כפתור סגירה של החלונית -->
+        <a href="#" class="close-CartPopup">&times;</a>
+
+        <div id="LogoCart" class="Logo">
+            <img src=".idea/WebImages/logo.png" alt="Logo">
+        </div>
+        <!-- כותרת החלונית -->
+        <h2>עגלת הקניות שלי</h2>
+
+        <!-- רשימת פריטים בעגלה -->
+        <ul class="cart-items">
+            <!-- פריט ראשון בעגלה -->
+            <li>
+                <img src=".idea/WebImages/ראפוור רצועה לכלב פרונט ראנג' אדום.png" alt="רצועה לכלב"
+                     class="cart-item-image">
+                <div class="cart-item-details">
+                    <p>ראפוור רצועה כלב פרונט ראנג' אדום</p>
+                    <p>כמות:1</p>
+                    <p>₪110</p>
+                </div>
+            </li>
+
+            <!-- פריט שני בעגלה -->
+            <li>
+                <img src=".idea/WebImages/הילס חטיף היפואלרגני לכלב.png" alt="חטיף לכלב" class="cart-item-image">
+                <div class="cart-item-details">
+                    <p>הילס חטיף היפואלרגני לכלב</p>
+                    <p>כמות:2</p>
+                    <p>₪50</p>
+                </div>
+            </li>
+        </ul>
+
+        <!-- אזור סיכום עגלת הקניות -->
+        <div class="cart-summary">
+            <p>סה"כ לתשלום: ₪210</p>
+            <a href="#CashBoxPopup" class="proceed-to-checkout">המשיכו לקופה</a>
+        </div>
+    </div>
+</div>
+
+
+<div id="scroll-rashi" class="scroll-container">
+
+    <!-- 1 -->
+    <div class="ScrollContainer-item">
+        <p class="Item-name">
+            <img src=".idea/WebImages/משחק לכלב קונג קלאסיק M.ראשי.png" alt="" style="width: 150px; height: 120px;">
+            משחק לכלב קונג קלאסיק M</p>
+        <p class="Item-price">65₪</p>
+        <button class="add-to-cart">
+            הוסף לסל
+            <img src=".idea/WebImages/שקית לסל.png" alt="" style="width: 12px">
+        </button>
+    </div>
+
+
+    <!-- 2 -->
+    <div class="ScrollContainer-item">
+        <p class="Item-name">
+            <img src=".idea/WebImages/הילס חטיף היפואלרגני לכלב.png" alt="" style="width: 110px; height: 120px;">
+            הילס חטיף היפואלרגני לכלב</p>
+        <p class="Item-price">50₪</p>
+        <button class="add-to-cart">
+            הוסף לסל
+            <img src=".idea/WebImages/שקית לסל.png" alt="" style="width: 12px">
+        </button>
+    </div>
+
+    <!-- 3 -->
+    <div class="ScrollContainer-item">
+        <p class="Item-name">
+            <img src=".idea/WebImages/מיטת בד כחולה לכלב.ראשי.png" alt="" style="width: 110px; height: 120px;">
+            מיטת בד כחולה לכלב בוגר</p>
+        <p class="Item-price">200₪</p>
+        <button class="add-to-cart">
+            הוסף לסל
+            <img src=".idea/WebImages/שקית לסל.png" alt="" style="width: 12px">
+        </button>
+    </div>
+
+    <!-- 4 -->
+    <div class="ScrollContainer-item">
+        <p class="Item-name">
+            <img src=".idea/WebImages/כף מדידה דיגיטלית למזון יבש.ראשי.png" alt=""
+                 style="width: 130px; height: 120px;">
+            כף מדידה דיגיטלית למזון יבש</p>
+        <p class="Item-price">75₪</p>
+        <button class="add-to-cart">
+            הוסף לסל
+            <img src=".idea/WebImages/שקית לסל.png" alt="" style="width: 12px">
+        </button>
+    </div>
+
+    <!-- 5 -->
+    <div class="ScrollContainer-item">
+        <p class="Item-name">
+            <img src=".idea/WebImages/קיווי טבעת משחק L לכלבים 18 סמ.ראשי.png" alt=""
+                 style="width: 130px; height: 120px;">
+            קיווי טבעת משחק לכלבים 18 ס"מ L</p>
+        <p class="Item-price">105₪</p>
+        <button class="add-to-cart">
+            הוסף לסל
+            <img src=".idea/WebImages/שקית לסל.png" alt="" style="width: 12px">
+        </button>
+    </div>
+
+    <!-- 6 -->
+    <div class="ScrollContainer-item">
+        <p class="Item-name">
+            <img src=".idea/WebImages/ראפוור רצועה לכלב פרונט ראנג' אדום.png" alt=""
+                 style="width: 110px; height: 120px;">
+            ראפוור רצועה לכלב פרונט ראנג' אדום</p>
+        <p class="Item-price">110₪</p>
+        <button class="add-to-cart">
+            הוסף לסל
+            <img src=".idea/WebImages/שקית לסל.png" alt="" style="width: 12px">
+        </button>
+    </div>
+
+    <!-- 7 -->
+    <div class="ScrollContainer-item">
+        <p class="Item-name">
+            <img src=".idea/WebImages/כלוב נשיאה לכלבים 30 קג.ראשי.jpg" alt="" style="width: 120px; height: 120px;">
+            כלוב נשיאה לכלבים 30 קג</p>
+        <p class="Item-price">200₪</p>
+        <button class="add-to-cart">
+            הוסף לסל
+            <img src=".idea/WebImages/שקית לסל.png" alt="" style="width: 12px">
+        </button>
+    </div>
+
+    <!-- 8 -->
+    <div class="ScrollContainer-item">
+        <p class="Item-name">
+            <img src=".idea/WebImages/אורבן צ'ויס בוגר גזע בינוני.מזון.png" alt=""
+                 style="width: 110px; height: 120px;">
+            אורבן צ'ויס בוגר גזע בינוני</p>
+        <p class="Item-price">150₪</p>
+        <button class="add-to-cart">
+            הוסף לסל
+            <img src=".idea/WebImages/שקית לסל.png" alt="" style="width: 12px">
+        </button>
+    </div>
+
+
+</div>
+<div id="scroll-Food" class="scroll-container">
+
+    <!-- 1 -->
+    <div class="ScrollContainer-item">
+        <p class="Item-name">
+            <img src=".idea/WebImages/אורבן צ'ויס בוגר גזע בינוני.מזון.png" alt=""
+                 style="width: 130px; height: 120px;">
+            אורבן צ'ויס בוגר גזע בינוני </p>
+        <p class="Item-price">125₪</p>
+        <button class="add-to-cart">
+            הוסף לסל
+            <img src=".idea/WebImages/שקית לסל.png" alt="" style="width: 12px">
+        </button>
+    </div>
+    <!-- 2 -->
+    <div class="ScrollContainer-item">
+        <p class="Item-name">
+            <img src=".idea/WebImages/אורבן צ'ויס בוגר גזע קטן.מזון.png" alt=""
+                 style="width: 130px; height: 120px;">
+            אורבן צ'ויס בוגר גזע קטן </p>
+        <p class="Item-price">125₪</p>
+        <button class="add-to-cart">
+            הוסף לסל
+            <img src=".idea/WebImages/שקית לסל.png" alt="" style="width: 12px">
+        </button>
+    </div>
+    <!-- 3 -->
+    <div class="ScrollContainer-item">
+        <p class="Item-name">
+            <img src=".idea/WebImages/אורבן צ'ויס גור גזסע קטן ובינוני.מזון.png" alt=""
+                 style="width: 130px; height: 120px;">
+            אורבן צ'ויס גור גזע קטן ובינוני </p>
+        <p class="Item-price">125₪</p>
+        <button class="add-to-cart">
+            הוסף לסל
+            <img src=".idea/WebImages/שקית לסל.png" alt="" style="width: 12px">
+        </button>
+    </div>
+    <!-- 4 -->
+    <div class="ScrollContainer-item">
+        <p class="Item-name">
+            <img src=".idea/WebImages/גו! מזון לכלב קרניבור נטול דגנים.מזון.png" alt=""
+                 style="width: 130px; height: 120px;">
+            גו! מזון לכלב קרניבור נטול דגנים</p>
+        <p class="Item-price">100₪</p>
+        <button class="add-to-cart">
+            הוסף לסל
+            <img src=".idea/WebImages/שקית לסל.png" alt="" style="width: 12px">
+        </button>
+    </div>
+    <!-- 5 -->
+    <div class="ScrollContainer-item">
+        <p class="Item-name">
+            <img src=".idea/WebImages/גו! מזון לכלב סקין אנד קואט עוף.png" alt=""
+                 style="width: 130px; height: 120px;">
+            גו! מזון לכלב סקין אנד קואט עוף</p>
+        <br>
+        <p class="Item-price">100₪</p>
+        <button class="add-to-cart">
+            הוסף לסל
+            <img src=".idea/WebImages/שקית לסל.png" alt="" style="width: 12px">
+        </button>
+    </div>
+    <!-- 6 -->
+    <div class="ScrollContainer-item">
+        <p class="Item-name">
+            <img src=".idea/WebImages/גו! מזון לכלב סקין אנד קואט סלמון.png" alt=""
+                 style="width: 130px; height: 120px;">
+            גו! מזון לכלב סקין אנד קואט סלמון</p>
+        <br>
+        <p class="Item-price">250₪</p>
+        <button class="add-to-cart">
+            הוסף לסל
+            <img src=".idea/WebImages/שקית לסל.png" alt="" style="width: 12px">
+        </button>
+    </div>
+    <!-- 7 -->
+    <div class="ScrollContainer-item">
+        <p class="Item-name">
+            <img src=".idea/WebImages/גו! מזון יבש לגורי כלבים קרניבור עוף, הודו ואווז.png" alt=""
+                 style="width: 130px; height: 120px;">
+            גו! מזון יבש לגורי כלבים קרניבור עוף, הודו ואווז</p>
+        <p class="Item-price">100₪</p>
+        <button class="add-to-cart">
+            הוסף לסל
+            <img src=".idea/WebImages/שקית לסל.png" alt="" style="width: 12px">
+        </button>
+    </div>
+    <!-- 8 -->
+    <div class="ScrollContainer-item">
+        <p class="Item-name">
+            <img src=".idea/WebImages/גו! מזון לכלב מבוגר קרניבור נטול דגנים עוף הודו וברווז.png" alt=""
+                 style="width: 130px; height: 120px;">
+            גו! מזון לכלב מבוגר קרניבור נטול דגנים עוף הודו וברווז</p>
+        <p class="Item-price">250₪</p>
+        <button class="add-to-cart">
+            הוסף לסל
+            <img src=".idea/WebImages/שקית לסל.png" alt="" style="width: 12px">
+        </button>
+    </div>
+    <!-- 9 -->
+    <div class="ScrollContainer-item">
+        <p class="Item-name">
+            <img src=".idea/WebImages/נטורל אנד דלישס לכלבים בינוניים וגדולים.מזון.png" alt=""
+                 style="width: 130px; height: 120px;">
+            נטורל אנד דלישס לכלבים בינוניים וגדולים</p>
+        <p class="Item-price">325₪</p>
+        <button class="add-to-cart">
+            הוסף לסל
+            <img src=".idea/WebImages/שקית לסל.png" alt="" style="width: 12px">
+        </button>
+    </div>
+    <!-- 10 -->
+    <div class="ScrollContainer-item">
+        <p class="Item-name">
+            <img src=".idea/WebImages/סאמיט מזון לכלב בוגר עוף והודו.מזון.png" alt=""
+                 style="width: 130px; height: 120px;">
+            סאמיט מזון לכלב בוגר עוף והודו</p>
+        <p class="Item-price">90₪</p>
+        <button class="add-to-cart">
+            הוסף לסל
+            <img src=".idea/WebImages/שקית לסל.png" alt="" style="width: 12px">
+        </button>
+    </div>
+    <!-- 11 -->
+    <div class="ScrollContainer-item">
+        <p class="Item-name">
+            <img src=".idea/WebImages/סאמיט מזון לכלב בוגר חזיר וכבש.מזון.png" alt=""
+                 style="width: 130px; height: 120px;">
+            סאמיט מזון לכלב בוגר חזיר וכבש</p>
+        <p class="Item-price">90₪</p>
+        <button class="add-to-cart">
+            הוסף לסל
+            <img src=".idea/WebImages/שקית לסל.png" alt="" style="width: 12px">
+        </button>
+    </div>
+    <!-- 12 -->
+    <div class="ScrollContainer-item">
+        <p class="Item-name">
+            <img src=".idea/WebImages/אוריג'ן אוריג'ינל מזון לכלב.מזון.png" alt=""
+                 style="width: 130px; height: 120px;">
+            אוריג'ן אוריג'ינל מזון לכלב</p>
+        <p class="Item-price">150₪</p>
+        <button class="add-to-cart">
+            הוסף לסל
+            <img src=".idea/WebImages/שקית לסל.png" alt="" style="width: 12px">
+        </button>
+    </div>
+    <!-- 13 -->
+    <div class="ScrollContainer-item">
+        <p class="Item-name">
+            <img src=".idea/WebImages/אוריג'ן מזון לגורי כלבים.מזון.png" alt=""
+                 style="width: 130px; height: 120px;">
+            אוריג'ן מזון לגורי כלבים</p>
+        <br>
+        <p class="Item-price">150₪</p>
+        <button class="add-to-cart">
+            הוסף לסל
+            <img src=".idea/WebImages/שקית לסל.png" alt="" style="width: 12px">
+        </button>
+    </div>
+    <!-- 14 -->
+    <div class="ScrollContainer-item">
+        <p class="Item-name">
+            <img src=".idea/WebImages/אקאנה מזון לכלב בוגר גזע גדול.מזון.png" alt=""
+                 style="width: 130px; height: 120px;">
+            אקאנה מזון לכלב בוגר גזע גדול</p>
+        <p class="Item-price">335₪</p>
+        <button class="add-to-cart">
+            הוסף לסל
+            <img src=".idea/WebImages/שקית לסל.png" alt="" style="width: 12px">
+        </button>
+    </div>
+    <!-- 15 -->
+    <div class="ScrollContainer-item">
+        <p class="Item-name">
+            <img src=".idea/WebImages/אקאנה  מזון לכלב בוגר גזע קטן.מזון.png" alt=""
+                 style="width: 130px; height: 120px;">
+            אקאנה מזון לכלב בוגר גזע קטן</p>
+        <p class="Item-price">125₪</p>
+        <button class="add-to-cart">
+            הוסף לסל
+            <img src=".idea/WebImages/שקית לסל.png" alt="" style="width: 12px">
+        </button>
+    </div>
+
+    <!-- 16 -->
+    <div class="ScrollContainer-item">
+        <p class="Item-name">
+            <img src=".idea/WebImages/הילס חטיף היפואלרגני לכלב.png" alt="" style="width: 120px; height: 120px;">
+            הילס חטיף היפואלרגני לכלב</p>
+        <p class="Item-price">50-150₪</p>
+        <button class="add-to-cart">
+            הוסף לסל
+            <img src=".idea/WebImages/שקית לסל.png" alt="" style="width: 12px">
+        </button>
+    </div>
+</div>
+
+<div id="scroll-Toys" class="scroll-container">
+
+    <!-- 1 -->
+    <div class="ScrollContainer-item">
+        <p class="Item-name">
+            <img src=".idea/WebImages/משחק לכלב קונג קלאסיק M.ראשי.png" alt="" style="width: 130px; height: 120px;">
+            משחק לכלב קונג קלאסיק M</p>
+        <p class="Item-price">65₪</p>
+        <button class="add-to-cart">
+            הוסף לסל
+            <img src=".idea/WebImages/שקית לסל.png" alt="" style="width: 12px">
+        </button>
+    </div>
+    <!--2 -->
+    <div class="ScrollContainer-item">
+        <p class="Item-name">
+            <img src=".idea/WebImages/משחק לכלב קונג קלאסיק M.ראשי.png" alt="" style="width: 130px; height: 120px;">
+            משחק לכלב קונג קלאסיק L</p>
+        <p class="Item-price">80₪</p>
+        <button class="add-to-cart">
+            הוסף לסל
+            <img src=".idea/WebImages/שקית לסל.png" alt="" style="width: 12px">
+        </button>
+    </div>
+    <!--3 -->
+    <div class="ScrollContainer-item">
+        <p class="Item-name">
+            <img src=".idea/WebImages/משחק לכלב קונג קלאסיק M.ראשי.png" alt="" style="width: 130px; height: 120px;">
+            משחק לכלב קונג קלאסיק XL</p>
+        <p class="Item-price">115₪</p>
+        <button class="add-to-cart">
+            הוסף לסל
+            <img src=".idea/WebImages/שקית לסל.png" alt="" style="width: 12px">
+        </button>
+    </div>
+    <!--4 -->
+    <div class="ScrollContainer-item">
+        <p class="Item-name">
+            <img src=".idea/WebImages/משחק לכלב קונג קלאסיק M.ראשי.png" alt="" style="width: 130px; height: 120px;">
+            משחק לכלב קונג קלאסיק XXL</p>
+        <p class="Item-price">140₪</p>
+        <button class="add-to-cart">
+            הוסף לסל
+            <img src=".idea/WebImages/שקית לסל.png" alt="" style="width: 12px">
+        </button>
+    </div>
+    <!--5 -->
+    <div class="ScrollContainer-item">
+        <p class="Item-name">
+            <img src=".idea/WebImages/משחק לכלב קונג קלאסיק M.ראשי.png" alt="" style="width: 130px; height: 120px;">
+            משחק לכלב קונג קלאסיק XS</p>
+        <p class="Item-price">40₪</p>
+        <button class="add-to-cart">
+            הוסף לסל
+            <img src=".idea/WebImages/שקית לסל.png" alt="" style="width: 12px">
+        </button>
+    </div>
+    <!--6 -->
+    <div class="ScrollContainer-item">
+        <p class="Item-name">
+            <img src=".idea/WebImages/משחק לכלב קונג קלאסיק M.ראשי.png" alt="" style="width: 130px; height: 120px;">
+            משחק לכלב קונג קלאסיק S</p>
+        <p class="Item-price">50₪</p>
+        <button class="add-to-cart">
+            הוסף לסל
+            <img src=".idea/WebImages/שקית לסל.png" alt="" style="width: 12px">
+        </button>
+    </div>
+    <!--7 -->
+    <div class="ScrollContainer-item">
+        <p class="Item-name">
+            <img src=".idea/WebImages/קונג וובלר קטן לכלב.צעצוע.png" alt="" style="width: 130px; height: 120px;">
+            קונג וובלר קטן לכלב</p>
+        <p class="Item-price">105₪</p>
+        <button class="add-to-cart">
+            הוסף לסל
+            <img src=".idea/WebImages/שקית לסל.png" alt="" style="width: 12px">
+        </button>
+    </div>
+    <!--8 -->
+    <div class="ScrollContainer-item">
+        <p class="Item-name">
+            <img src=".idea/WebImages/קונג וובלר קטן לכלב.צעצוע.png" alt="" style="width: 130px; height: 120px;">
+            קונג וובלר בינוני לכלב</p>
+        <p class="Item-price">130₪</p>
+        <button class="add-to-cart">
+            הוסף לסל
+            <img src=".idea/WebImages/שקית לסל.png" alt="" style="width: 12px">
+        </button>
+    </div>
+    <!--9 -->
+    <div class="ScrollContainer-item">
+        <p class="Item-name">
+            <img src=".idea/WebImages/קיווי טבעת משחק L לכלבים 18 סמ.ראשי.png" alt=""
+                 style="width: 130px; height: 120px;">
+            קיווי טבעת משחק לכלבים 18 ס"מ L</p>
+        <p class="Item-price">105₪</p>
+        <button class="add-to-cart">
+            הוסף לסל
+            <img src=".idea/WebImages/שקית לסל.png" alt="" style="width: 12px">
+        </button>
+    </div>
+    <!--10 -->
+    <div class="ScrollContainer-item">
+        <p class="Item-name">
+            <img src=".idea/WebImages/קיווי תמנון משחק לכלבים.צעצוע.png" alt=""
+                 style="width: 130px; height: 120px;">
+            קיווי תמנון משחק לכלבים 13 ס"מ S</p>
+        <p class="Item-price">85₪</p>
+        <button class="add-to-cart">
+            הוסף לסל
+            <img src=".idea/WebImages/שקית לסל.png" alt="" style="width: 12px">
+        </button>
+    </div>
+    <!--11 -->
+    <div class="ScrollContainer-item">
+        <p class="Item-name">
+            <img src=".idea/WebImages/קיווי משחק לכלבים 6 סמ.צעצוע.png" alt="" style="width: 130px; height: 120px;">
+            קיווי כדור משחק לכלבים 6 ס"מ</p>
+        <p class="Item-price">45₪</p>
+        <button class="add-to-cart">
+            הוסף לסל
+            <img src=".idea/WebImages/שקית לסל.png" alt="" style="width: 12px">
+        </button>
+    </div>
+    <!--12 -->
+    <div class="ScrollContainer-item">
+        <p class="Item-name">
+            <img src=".idea/WebImages/קיווי תמנון משחק לכלבים.צעצוע.png" alt=""
+                 style="width: 130px; height: 120px;">
+            קיווי תמנון משחק לכלבים 17 ס"מ L</p>
+        <p class="Item-price">125₪</p>
+        <button class="add-to-cart">
+            הוסף לסל
+            <img src=".idea/WebImages/שקית לסל.png" alt="" style="width: 12px">
+        </button>
+    </div>
+    <!--13 -->
+    <div class="ScrollContainer-item">
+        <p class="Item-name">
+            <img src=".idea/WebImages/קיווי ווקר כדור משחק לכלב בצורת דודקה.צעצוע.png" alt=""
+                 style="width: 130px; height: 120px;">
+            קיווי ווקר כדור משחק לכלב בצורת דודקה</p>
+        <br>
+        <p class="Item-price">100₪</p>
+        <button class="add-to-cart">
+            הוסף לסל
+            <img src=".idea/WebImages/שקית לסל.png" alt="" style="width: 12px">
+        </button>
+    </div>
+    <!--14 -->
+    <div class="ScrollContainer-item">
+        <p class="Item-name">
+            <img src=".idea/WebImages/קיווי ווקר עצם דנטלית עץ קפה לחיזוק שריר הלסת לכלב גדול.צעצוע.png" alt=""
+                 style="width: 130px; height: 120px;">
+            קיווי ווקר עצם דנטלית עץ קפה לחיזוק שריר הלסת לכלב גדול</p>
+        <p class="Item-price">130₪</p>
+        <button class="add-to-cart">
+            הוסף לסל
+            <img src=".idea/WebImages/שקית לסל.png" alt="" style="width: 12px">
+        </button>
+    </div>
+    <!--15 -->
+    <div class="ScrollContainer-item">
+        <p class="Item-name">
+            <img src=".idea/WebImages/קיווי ווקר עצם דנטלית עץ קפה לחיזוק שריר הלסת לכלב בינוני.צעצוע.png" alt=""
+                 style="width: 130px; height: 120px;">
+            קיווי ווקר עצם דנטלית עץ קפה לחיזוק שריר הלסת לכלב בינוני</p>
+        <p class="Item-price">75₪</p>
+        <button class="add-to-cart">
+            הוסף לסל
+            <img src=".idea/WebImages/שקית לסל.png" alt="" style="width: 12px">
+        </button>
+    </div>
+    <!--16 -->
+    <div class="ScrollContainer-item">
+        <p class="Item-name">
+            <img src=".idea/WebImages/קיווי ווקר עצם דנטלית עץ קפה לחיזוק שריר הלסת לכלב קטן.צעצוע.png" alt=""
+                 style="width: 130px; height: 120px;">
+            קיווי ווקר עצם דנטלית עץ קפה לחיזוק שריר הלסת לכלב קטן</p>
+        <p class="Item-price">55₪</p>
+        <button class="add-to-cart">
+            הוסף לסל
+            <img src=".idea/WebImages/שקית לסל.png" alt="" style="width: 12px">
+        </button>
+    </div>
+</div>
+
+<div id="scroll-Cages" class="scroll-container">
+
+    <!-- 1 -->
+    <div class="ScrollContainer-item">
+        <p class="Item-name">
+            <img src=".idea/WebImages/כלוב נשיאה לכלבים 30 קג.ראשי.jpg" alt="" style="width: 120px; height: 120px;">
+            כלוב נשיאה אטלס לכלבים 30 ק"ג</p>
+        <p class="Item-price">200₪</p>
+        <button class="add-to-cart">
+            הוסף לסל
+            <img src=".idea/WebImages/שקית לסל.png" alt="" style="width: 12px">
+        </button>
+    </div>
+    <!-- 2 -->
+    <div class="ScrollContainer-item">
+        <p class="Item-name">
+            <img src=".idea/WebImages/כלוב נשיאה אטלס לכלבים 40 קג.כלוב.png" alt=""
+                 style="width: 120px; height: 120px;">
+            כלוב נשיאה אטלס לכלבים 40 ק"ג</p>
+        <p class="Item-price">420₪</p>
+        <button class="add-to-cart">
+            הוסף לסל
+            <img src=".idea/WebImages/שקית לסל.png" alt="" style="width: 12px">
+        </button>
+    </div>
+    <!-- 3 -->
+    <div class="ScrollContainer-item">
+        <p class="Item-name">
+            <img src=".idea/WebImages/כלוב נשיאה אטלס לכלבים 20 קג.כלוב.png" alt=""
+                 style="width: 120px; height: 120px;">
+            כלוב נשיאה אטלס לכלבים 20 ק"ג</p>
+        <p class="Item-price">160₪</p>
+        <button class="add-to-cart">
+            הוסף לסל
+            <img src=".idea/WebImages/שקית לסל.png" alt="" style="width: 12px">
+        </button>
+    </div>
+    <!-- 4 -->
+    <div class="ScrollContainer-item">
+        <p class="Item-name">
+            <img src=".idea/WebImages/כלוב נשיאה אטלס לכלבים 10 קג.כלוב.png" alt=""
+                 style="width: 120px; height: 120px;">
+            כלוב נשיאה אטלס לכלבים 10 ק"ג</p>
+        <p class="Item-price">110₪</p>
+        <button class="add-to-cart">
+            הוסף לסל
+            <img src=".idea/WebImages/שקית לסל.png" alt="" style="width: 12px">
+        </button>
+    </div>
+    <!-- 5 -->
+    <div class="ScrollContainer-item">
+        <p class="Item-name">
+            <img src=".idea/WebImages/מלונה מפנקת תוצרת כתר לכלב.כלוב.png" alt=""
+                 style="width: 120px; height: 120px;">
+            מלונה מפנקת תוצרת כתר לכלב</p>
+        <p class="Item-price">375₪</p>
+        <button class="add-to-cart">
+            הוסף לסל
+            <img src=".idea/WebImages/שקית לסל.png" alt="" style="width: 12px">
+        </button>
+    </div>
+
+    <!-- 6 -->
+    <div class="ScrollContainer-item">
+        <p class="Item-name">
+            <img src=".idea/WebImages/כלוב נשיאה אטלס לכלבים 70 קג.כלוב.png" alt=""
+                 style="width: 120px; height: 120px;">
+            כלוב נשיאה אטלס לכלבים 70 ק"ג</p>
+        <p class="Item-price">1350₪</p>
+        <button class="add-to-cart">
+            הוסף לסל
+            <img src=".idea/WebImages/שקית לסל.png" alt="" style="width: 12px">
+        </button>
+    </div>
+
+    <!-- 7 -->
+    <div class="ScrollContainer-item">
+        <p class="Item-name">
+            <img src=".idea/WebImages/כלוב נשיאה אטלס לכלבים 60 קג.כלוב.png" alt=""
+                 style="width: 140px; height: 120px;">
+            כלוב נשיאה אטלס לכלבים 60 ק"ג</p>
+        <p class="Item-price">950₪</p>
+        <button class="add-to-cart">
+            הוסף לסל
+            <img src=".idea/WebImages/שקית לסל.png" alt="" style="width: 12px">
+        </button>
+    </div>
+    <!-- 8 -->
+    <div class="ScrollContainer-item">
+        <p class="Item-name">
+            <img src=".idea/WebImages/כלוב נשיאה אטלס לכלבים 50 קג.כלוב.png" alt=""
+                 style="width: 130px; height: 120px;">
+            כלוב נשיאה אטלס לכלבים 50 ק"ג</p>
+        <p class="Item-price">760₪</p>
+        <button class="add-to-cart">
+            הוסף לסל
+            <img src=".idea/WebImages/שקית לסל.png" alt="" style="width: 12px">
+        </button>
+    </div>
+    <!-- 9 -->
+    <div class="ScrollContainer-item">
+        <p class="Item-name">
+            <img src=".idea/WebImages/מלונה לכלב בינוני או גדול 7 קג.כלוב.png" alt=""
+                 style="width: 130px; height: 120px;">
+            מלונה לכלב בינוני או גדול </p>
+        <p class="Item-price">650₪</p>
+        <button class="add-to-cart">
+            הוסף לסל
+            <img src=".idea/WebImages/שקית לסל.png" alt="" style="width: 12px">
+        </button>
+    </div>
+    <!-- 10 -->
+    <div class="ScrollContainer-item">
+        <p class="Item-name">
+            <img src=".idea/WebImages/מלונה לכלב בינוני או גדול 7 קג.כלוב.png" alt=""
+                 style="width: 130px; height: 120px;">
+            מלונה לכלב קטן </p>
+        <br>
+        <p class="Item-price">245₪</p>
+        <button class="add-to-cart">
+            הוסף לסל
+            <img src=".idea/WebImages/שקית לסל.png" alt="" style="width: 12px">
+        </button>
+    </div>
+    <!-- 11 -->
+    <div class="ScrollContainer-item">
+        <p class="Item-name">
+            <img src=".idea/WebImages/כלוב אילוף לכלבים סופר פטס.כלוב.png" alt=""
+                 style="width: 130px; height: 120px;">
+            מלונה לכלב קטן </p>
+        <br>
+        <p class="Item-price">455₪</p>
+        <button class="add-to-cart">
+            הוסף לסל
+            <img src=".idea/WebImages/שקית לסל.png" alt="" style="width: 12px">
+        </button>
+    </div>
+    <!-- 12 -->
+    <div class="ScrollContainer-item">
+        <p class="Item-name">
+            <img src=".idea/WebImages/גדר אילוף לכלבים סופר פטס.כלב.png" alt=""
+                 style="width: 130px; height: 120px;">
+            גדר אילוף לכלבים סופר פטס </p>
+        <p class="Item-price">370₪</p>
+        <button class="add-to-cart">
+            הוסף לסל
+            <img src=".idea/WebImages/שקית לסל.png" alt="" style="width: 12px">
+        </button>
+    </div>
+
+</div>
+
+<div id="scroll-Mashlim" class="scroll-container">
+
+    <!-- 1 -->
+    <div class="ScrollContainer-item">
+        <p class="Item-name">
+            <img src=".idea/WebImages/כף מדידה דיגיטלית למזון יבש.ראשי.png" alt=""
+                 style="width: 130px; height: 120px;">
+            כף מדידה דיגיטלית למזון יבש</p>
+        <p class="Item-price">75₪</p>
+        <button class="add-to-cart">
+            הוסף לסל
+            <img src=".idea/WebImages/שקית לסל.png" alt="" style="width: 12px">
+        </button>
+    </div>
+
+    <!-- 2-->
+    <div class="ScrollContainer-item">
+        <p class="Item-name">
+            <img src=".idea/WebImages/ראפוור רצועה לכלב פרונט ראנג' אדום.png" alt=""
+                 style="width: 110px; height: 120px;">
+            ראפוור רצועה לכלב פרונט ראנג' אדום</p>
+        <p class="Item-price">110₪</p>
+        <button class="add-to-cart">
+            הוסף לסל
+            <img src=".idea/WebImages/שקית לסל.png" alt="" style="width: 12px">
+        </button>
+    </div>
+
+    <!-- 3-->
+    <div class="ScrollContainer-item">
+        <p class="Item-name">
+            <img src=".idea/WebImages/ראפוור רצועה לכלב פרונט ראנג.משלים.png" alt=""
+                 style="width: 110px; height: 120px;">
+            ראפוור רצועה לכלב פרונט ראנג' כתום</p>
+        <p class="Item-price">110₪</p>
+        <button class="add-to-cart">
+            הוסף לסל
+            <img src=".idea/WebImages/שקית לסל.png" alt="" style="width: 12px">
+        </button>
+    </div>
+    <!-- 4-->
+    <div class="ScrollContainer-item">
+        <p class="Item-name">
+            <img src=".idea/WebImages/ראפוור רצועה לכלב פרונט ראנג' אפור.משלים.png" alt=""
+                 style="width: 110px; height: 120px;">
+            ראפוור רצועה לכלב פרונט ראנג' אפור</p>
+        <p class="Item-price">110₪</p>
+        <button class="add-to-cart">
+            הוסף לסל
+            <img src=".idea/WebImages/שקית לסל.png" alt="" style="width: 12px">
+        </button>
+    </div>
+    <!-- 5 -->
+    <div class="ScrollContainer-item">
+        <p class="Item-name">
+            <img src=".idea/WebImages/מיטת בד כחולה לכלב.ראשי.png" alt="" style="width: 110px; height: 100px;">
+            מיטת בד כחולה לכלב בוגר</p>
+        <br>
+        <p class="Item-price">200₪</p>
+        <button class="add-to-cart">
+            הוסף לסל
+            <img src=".idea/WebImages/שקית לסל.png" alt="" style="width: 12px">
+        </button>
+    </div>
+    <!-- 6 -->
+    <div class="ScrollContainer-item">
+        <p class="Item-name">
+            <img src=".idea/WebImages/מיטה לכלב בינוני דגם קאמו.משלים.png" alt=""
+                 style="width: 110px; height: 100px;">
+            מיטה לכלב בינוני דגם קאמו</p>
+        <br>
+        <p class="Item-price">105₪</p>
+        <button class="add-to-cart">
+            הוסף לסל
+            <img src=".idea/WebImages/שקית לסל.png" alt="" style="width: 12px">
+        </button>
+    </div>
+
+    <!-- 7 -->
+    <div class="ScrollContainer-item">
+        <p class="Item-name">
+            <img src=".idea/WebImages/מיטה חסינת מים לכלב גדול צבע סגול.משלים.png" alt=""
+                 style="width: 110px; height: 100px;">
+            מיטה חסינת מים לכלב גדול צבע סגול</p>
+        <br>
+        <p class="Item-price">250₪</p>
+        <button class="add-to-cart">
+            הוסף לסל
+            <img src=".idea/WebImages/שקית לסל.png" alt="" style="width: 12px">
+        </button>
+    </div>
+
+    <!-- 8 -->
+    <div class="ScrollContainer-item">
+        <p class="Item-name">
+            <img src=".idea/WebImages/מיטת כותנה לכלב בינוני פטס פרוג'קט.משלים.png" alt=""
+                 style="width: 110px; height: 100px;">
+            מיטת כותנה לכלב בינוני פטס פרוג'קט</p>
+        <br>
+        <p class="Item-price">170₪</p>
+        <button class="add-to-cart">
+            הוסף לסל
+            <img src=".idea/WebImages/שקית לסל.png" alt="" style="width: 12px">
+        </button>
+    </div>
+
+    <!-- 9 -->
+    <div class="ScrollContainer-item">
+        <p class="Item-name">
+            <img src=".idea/WebImages/אבסורב 25 יחידות פדים ענקיים אנטיבקטריאליים.משלים.png" alt=""
+                 style="width: 110px; height: 100px;">
+            אבסורב 25 יחידות פדים ענקיים אנטיבקטריאליים</p>
+        <p class="Item-price">105₪</p>
+        <button class="add-to-cart">
+            הוסף לסל
+            <img src=".idea/WebImages/שקית לסל.png" alt="" style="width: 12px">
+        </button>
+    </div>
+    <!-- 10 -->
+    <div class="ScrollContainer-item">
+        <p class="Item-name">
+            <img src=".idea/WebImages/אבסורב 50 יחידות פדים אנטיבקטריאליים.משלים.png" alt=""
+                 style="width: 110px; height: 100px;">
+            אבסורב 50 יחידות פדים ענקיים אנטיבקטריאליים</p>
+        <p class="Item-price">105₪</p>
+        <button class="add-to-cart">
+            הוסף לסל
+            <img src=".idea/WebImages/שקית לסל.png" alt="" style="width: 12px">
+        </button>
+    </div>
+    <!-- 11 -->
+    <div class="ScrollContainer-item">
+        <p class="Item-name">
+            <img src=".idea/WebImages/אבסורב 50 יחידות פדים אנטיבקטריאליים פחם פעיל.משלים.png" alt=""
+                 style="width: 110px; height: 100px;">
+            אבסורב 50 יחידות פדים אנטיבקטריאליים פחם פעיל</p>
+        <p class="Item-price">105₪</p>
+        <button class="add-to-cart">
+            הוסף לסל
+            <img src=".idea/WebImages/שקית לסל.png" alt="" style="width: 12px">
+        </button>
+    </div>
+    <!-- 12 -->
+    <div class="ScrollContainer-item">
+        <p class="Item-name">
+            <img src=".idea/WebImages/אבסורב 100 יחידות פדים אנטיבקטריאליים.משלים.png" alt=""
+                 style="width: 110px; height: 100px;">
+            אבסורב 100 יחידות פדים אנטיבקטריאליים</p>
+        <br>
+        <p class="Item-price">110₪</p>
+        <button class="add-to-cart">
+            הוסף לסל
+            <img src=".idea/WebImages/שקית לסל.png" alt="" style="width: 12px">
+        </button>
+    </div>
+
+    <!-- 13 -->
+    <div class="ScrollContainer-item">
+        <p class="Item-name">
+            <img src=".idea/WebImages/קולר לכלב פרונט ראנג אדום ראפוור.משלים.png" alt=""
+                 style="width: 110px; height: 100px;">
+            קולר לכלב פרונט ראנג אדום ראפוור</p>
+        <br>
+        <p class="Item-price">100₪</p>
+        <button class="add-to-cart">
+            הוסף לסל
+            <img src=".idea/WebImages/שקית לסל.png" alt="" style="width: 12px">
+        </button>
+    </div>
+    <!-- 14 -->
+    <div class="ScrollContainer-item">
+        <p class="Item-name">
+            <img src=".idea/WebImages/קולר לכלב פרונט ראנג ירוק כהה ראפוור.משלים.png" alt=""
+                 style="width: 110px; height: 100px;">
+            קולר לכלב פרונט ראנג ירוק כהה ראפוור</p>
+        <br>
+        <p class="Item-price">100₪</p>
+        <button class="add-to-cart">
+            הוסף לסל
+            <img src=".idea/WebImages/שקית לסל.png" alt="" style="width: 12px">
+        </button>
+    </div>
+    <!-- 15 -->
+    <div class="ScrollContainer-item">
+        <p class="Item-name">
+            <img src=".idea/WebImages/קולר לכלב פרונט ראנג כתום ראפוור.משלים.png" alt=""
+                 style="width: 110px; height: 100px;">
+            קולר לכלב פרונט ראנג כתום ראפוור</p>
+        <br>
+        <p class="Item-price">100₪</p>
+        <button class="add-to-cart">
+            הוסף לסל
+            <img src=".idea/WebImages/שקית לסל.png" alt="" style="width: 12px">
+        </button>
+    </div>
+    <!-- 16 -->
+    <div class="ScrollContainer-item">
+        <p class="Item-name">
+            <img src=".idea/WebImages/מחבר רצועה כפול לשני כלבים ראפוור.משלים.png" alt=""
+                 style="width: 110px; height: 100px;">
+            מחבר רצועה כפול לשני כלבים ראפוור</p>
+        <br>
+        <p class="Item-price">115₪</p>
+        <button class="add-to-cart">
+            הוסף לסל
+            <img src=".idea/WebImages/שקית לסל.png" alt="" style="width: 12px">
+        </button>
+    </div>
+</div>
+
+<script src="PART_B.js"></script>
+<script src="part_B_Validations.js"></script>
+
+</body>
 </html>
